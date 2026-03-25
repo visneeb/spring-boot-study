@@ -22,6 +22,9 @@ public class Note {
   @Column(columnDefinition = "TEXT") // เนื้อหายาว ใช้ type TEXT
   private String content;
 
+  @Column(name = "image_url")
+  private String imageUrl;
+
   // ✅ Constructor ว่าง (จำเป็นสำหรับ JPA)
   public Note() {}
 
@@ -41,5 +44,8 @@ public class Note {
 
   public String getContent() { return content; }
   public void setContent(String content) { this.content = content; }
+
+    public String getImageUrl() { return imageUrl; }
+   public void setImageUrl(String imageUrl) { this.imageUrl = imageUrl; }
 
 }
